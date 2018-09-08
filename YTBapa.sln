@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{B91C4BBD-DD5B-4917-AF5B-ED36276A3273}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bll", "Bll", "{F7E8A784-A83B-4B2F-B201-CE92F39D8E3F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utility", "Utility", "{11F233DD-8C12-4F94-919B-A6F70082768E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTBapa.Services", "src\Bll\YTBapa.Services\YTBapa.Services.csproj", "{BFC7B1B7-1B7F-4BA8-9E15-3EE8740A267E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTBapa.Common", "src\Utility\YTBapa.Common\YTBapa.Common.csproj", "{E6686718-3847-49E1-A944-4DEA655B7E7D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTBapa.Web", "src\Web\YTBapa.Web\YTBapa.Web.csproj", "{437A2437-DBBE-4815-B16A-89E71AFA58F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DD4F8B80-4702-4067-8963-650D5AE0F33E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{C46508F6-268E-4747-98DB-E0FE6F14E6BB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTBapa.Services.Test", "src\Tests\YTBapa.Services.Test\YTBapa.Services.Test.csproj", "{C21B4261-10B8-44B4-A727-6FE8C34F6882}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTBapa.PanelTool", "src\Tools\YTBapa.PanelTool\YTBapa.PanelTool.csproj", "{E37A139E-A008-4BCC-92A8-92C049CC781D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		YTBapa.Web|Any CPU = YTBapa.Web|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFC7B1B7-1B7F-4BA8-9E15-3EE8740A267E}.YTBapa.Web|Any CPU.ActiveCfg = YTBapa.Web|Any CPU
+		{BFC7B1B7-1B7F-4BA8-9E15-3EE8740A267E}.YTBapa.Web|Any CPU.Build.0 = YTBapa.Web|Any CPU
+		{E6686718-3847-49E1-A944-4DEA655B7E7D}.YTBapa.Web|Any CPU.ActiveCfg = YTBapa.Web|Any CPU
+		{E6686718-3847-49E1-A944-4DEA655B7E7D}.YTBapa.Web|Any CPU.Build.0 = YTBapa.Web|Any CPU
+		{437A2437-DBBE-4815-B16A-89E71AFA58F8}.YTBapa.Web|Any CPU.ActiveCfg = YTBapa.Web|Any CPU
+		{437A2437-DBBE-4815-B16A-89E71AFA58F8}.YTBapa.Web|Any CPU.Build.0 = YTBapa.Web|Any CPU
+		{C21B4261-10B8-44B4-A727-6FE8C34F6882}.YTBapa.Web|Any CPU.ActiveCfg = Debug|Any CPU
+		{C21B4261-10B8-44B4-A727-6FE8C34F6882}.YTBapa.Web|Any CPU.Build.0 = Debug|Any CPU
+		{E37A139E-A008-4BCC-92A8-92C049CC781D}.YTBapa.Web|Any CPU.ActiveCfg = Debug|Any CPU
+		{E37A139E-A008-4BCC-92A8-92C049CC781D}.YTBapa.Web|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BFC7B1B7-1B7F-4BA8-9E15-3EE8740A267E} = {F7E8A784-A83B-4B2F-B201-CE92F39D8E3F}
+		{E6686718-3847-49E1-A944-4DEA655B7E7D} = {11F233DD-8C12-4F94-919B-A6F70082768E}
+		{437A2437-DBBE-4815-B16A-89E71AFA58F8} = {B91C4BBD-DD5B-4917-AF5B-ED36276A3273}
+		{C21B4261-10B8-44B4-A727-6FE8C34F6882} = {DD4F8B80-4702-4067-8963-650D5AE0F33E}
+		{E37A139E-A008-4BCC-92A8-92C049CC781D} = {C46508F6-268E-4747-98DB-E0FE6F14E6BB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF44AD3E-EB79-4195-B176-2920DE71506F}
+	EndGlobalSection
+EndGlobal
