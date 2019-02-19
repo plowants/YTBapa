@@ -19,6 +19,11 @@ namespace YTBapa.Web
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseIISIntegration()
+                .UseKestrel()
+                .UseSockets(options => {
+                    options.IOQueueCount = 20;
+                })
                 .UseStartup<Startup>();
     }
 }

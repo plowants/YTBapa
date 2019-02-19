@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                //"${workspaceFolder}/src/Tools/YTBapa.PanelTool/YTBapa.PanelTool.csproj"
+                "${workspaceFolder}/src/Web/YTBapa.Web/YTBapa.Web.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
