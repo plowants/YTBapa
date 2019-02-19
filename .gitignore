@@ -230,3 +230,4 @@ Config-Dev
 /src/Wholesale/Inventory.Wholesale.API/Properties/PublishProfiles/Inventory.Wholesale.API.pubxml
 /src/Web/Inventory.Web
 /Services
+/.vscode
