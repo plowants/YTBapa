@@ -10,7 +10,7 @@ namespace YTBapa.PanelTool
         static void Main(string[] args)
         {
             DateTime time = DateTime.Now;
-            var  time2 = SystemTime.UtcNow;
+            var time2 = SystemTime.UtcNow;
 
             Console.WriteLine(TimeSpan.MinValue);
             Console.WriteLine(time);
@@ -40,6 +40,22 @@ namespace YTBapa.PanelTool
             DateTime converted = new DateTime(1970, 1, 1, 0, 0, 0, 0);
             DateTime newDateTime = converted.AddSeconds(timestamp);
             return newDateTime.ToLocalTime();
+        }
+
+        static void RabbitMQTest()
+        {
+            ConnectionFactory factory = new ConnectionFactory()
+            {
+                UserName = "zhidian",
+                Password = "zhidian",
+                VirtualHost = "/",
+                HostName = "192.168.199.17",
+                Port = 5672,
+            };
+            var conn = factory.CreateConnection();
+            IModel channel = conn.CreateModel();
+            channel.QueueDeclare("", false, false, false, null);
+            
         }
     }
 }
