@@ -4,6 +4,8 @@ using ServiceStack;
 using ServiceStack.Text;
 using RabbitMQ.Client;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace YTBapa.PanelTool
 {
@@ -11,7 +13,7 @@ namespace YTBapa.PanelTool
     {
         static void Main(string[] args)
         {
-            RabbitMQTest();
+            //RabbitMQTest();
             //DateTime time = DateTime.Now;
             //var time2 = SystemTime.UtcNow;
 
@@ -34,6 +36,15 @@ namespace YTBapa.PanelTool
             //Console.WriteLine(value);
             //TestDto dto = str.FromJson<TestDto>();
             //Console.WriteLine(dto.Time);
+            
+            Task.Run(() =>
+                {
+                    for(int i=0;i<10;i++){ 
+                        Console.Out.WriteLine($"cc work  {i}");
+                        Thread.Sleep(1000);
+                    }
+                }
+            );
             Console.WriteLine("Hello World!");
             Console.Read();
         }
@@ -59,17 +70,20 @@ namespace YTBapa.PanelTool
             string queue = "Wholesale-WholesaleOrder-OrderCancel1";
             string queueCusstomer = "Wholesale-WholesaleOrder-OrderCancel-Consumer1";
 
-            IDictionary<string, object> keys = new Dictionary<string, object>() { { "x-dead-letter-exchange", exchange } };
+            exchange = "Wholesale-WholesaleOrder";
+            queue = "Wholesale-WholesaleOrder-Order";
+
+            //IDictionary<string, object> keys = new Dictionary<string, object>() { { "x-dead-letter-exchange", exchange } };
 
             var conn = factory.CreateConnection();
             IModel channel = conn.CreateModel();
 
             channel.ExchangeDeclare(exchange, ExchangeType.Fanout,true);
-            channel.QueueDeclare(queue, true, false, false, keys);
+            channel.QueueDeclare(queue, true, false, false);
             channel.QueueBind(queue, exchange, "");
 
-            channel.QueueDeclare(queueCusstomer, true, false, false, null);
-            channel.QueueBind(queueCusstomer, exchange, "");
+            //channel.QueueDeclare(queueCusstomer, true, false, false, null);
+            //channel.QueueBind(queueCusstomer, exchange, "");
             channel.Close();
             conn.Close();
 
